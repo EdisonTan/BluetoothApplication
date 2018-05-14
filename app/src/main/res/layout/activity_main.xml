@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.administrator.bluetoothapplication.MainActivity"
+    android:weightSum="10">
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:text="scale++"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/scalePlus"
+            android:layout_weight="0.00" />
+
+        <Button
+            android:text="scale--"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/scaleMinus"
+            android:layout_weight="0.00" />
+        <Button
+            android:text="reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/resetEmp"
+            android:layout_weight="0.00" />
+
+        <Button
+            android:text="发送"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sendData"
+            android:layout_weight="0.00"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/inputEditText"
+            android:layout_marginStart="10dp" />
+
+        <EditText
+            android:layout_width="154dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="input"
+            android:ems="10"
+            android:id="@+id/inputEditText"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sendData"
+            android:layout_marginTop="0dp"
+            android:id="@+id/stateView"
+            android:layout_weight="1.68" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/leadOneView"
+            android:layout_weight="0.55" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/leadTwoView"
+            android:layout_weight="1" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/leadIIValueView"
+            android:layout_weight="1.68" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/leadIValueView"
+            android:layout_weight="1.68" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="9"
+        android:orientation="vertical"
+        android:weightSum="12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:layout_weight="4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <SurfaceView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:id="@+id/leadIWaveView"
+            android:layout_height="match_parent" />
+        <SurfaceView
+            android:layout_marginLeft="2dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:id="@+id/leadAVRWaveView"
+            android:layout_height="match_parent" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:layout_weight="4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <SurfaceView
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignEnd="@+id/inputEditText"
+                android:id="@+id/leadIIWaveView"
+                android:layout_weight="1" />
+
+            <SurfaceView
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignEnd="@+id/inputEditText"
+                android:id="@+id/leadAVLWaveView"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:layout_weight="4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <SurfaceView
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignEnd="@+id/inputEditText"
+                android:id="@+id/leadIIIWaveView"
+                android:layout_weight="1" />
+            <SurfaceView
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="1dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignEnd="@+id/inputEditText"
+                android:id="@+id/leadAVFWaveView"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
